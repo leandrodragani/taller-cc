@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     }
 
     const user = {
-      id: db.users.length + 1,
+      id: Math.floor(Math.random() * 100000),
       name: parsedBody.data.name,
       email: parsedBody.data.email,
     };
